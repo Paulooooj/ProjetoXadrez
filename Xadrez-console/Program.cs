@@ -1,5 +1,6 @@
 ﻿using System.Net.WebSockets;
 using tabuleiro;
+using Xadrez_console.tabuleiro;
 
 namespace Xadrez_console
 {
@@ -7,10 +8,11 @@ namespace Xadrez_console
     {
         static void Main(string[] args)
         {
-            Posicao ps = new Posicao(3, 4);
+            //Posicao ps = new Posicao(3, 4);
 
-
-            Console.WriteLine(ps);
+            Tabuleiro tb = new Tabuleiro(8, 8);
+            Console.WriteLine("oi");
+            //Console.WriteLine(ps);
         }
     }
 }
