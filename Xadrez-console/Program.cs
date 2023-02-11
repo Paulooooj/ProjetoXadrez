@@ -11,7 +11,9 @@ namespace Xadrez_console
             //Posicao ps = new Posicao(3, 4);
 
             Tabuleiro tb = new Tabuleiro(8, 8);
-            Console.WriteLine("oi");
+            
+            Tela.ImprimirTabuleiro(tb);
+
             //Console.WriteLine(ps);
         }
     }
