@@ -11,14 +11,26 @@ namespace Xadrez_console
         {
             //Posicao ps = new Posicao(3, 4);
 
-            Tabuleiro tb = new Tabuleiro(8, 8);
-
-            tb.ColocarPeca(new Torre(Cor.Preta, tb), new Posicao(0, 0));
-            tb.ColocarPeca(new Torre(Cor.Preta, tb), new Posicao(1, 3));
-            tb.ColocarPeca(new Rei(Cor.Preta, tb), new Posicao(2, 4));
+            try
+            {
 
 
-            Tela.ImprimirTabuleiro(tb);
+                Tabuleiro tb = new Tabuleiro(8, 8);
+
+                tb.ColocarPeca(new Torre(Cor.Preta, tb), new Posicao(0, 0));
+                tb.ColocarPeca(new Torre(Cor.Preta, tb), new Posicao(1, 3));
+                tb.ColocarPeca(new Rei(Cor.Preta, tb), new Posicao(2, 4));
+                tb.ColocarPeca(new Rei(Cor.Preta, tb), new Posicao(0, 0));
+
+
+
+                Tela.ImprimirTabuleiro(tb);
+
+            }
+            catch(TabuleiroException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
