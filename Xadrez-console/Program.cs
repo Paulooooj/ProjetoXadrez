@@ -11,22 +11,10 @@ namespace Xadrez_console
         static void Main(string[] args)
         {
 
+            
+            Posicao ps = new Posicao(3, 4);
 
-
-
-            PosicaoXadrez px = new PosicaoXadrez('c', 7);
-
-            Console.WriteLine(px.ToPosicao());
-            
-            
-            
-            
-            
-            
-            
-            //Posicao ps = new Posicao(3, 4);
-
-           /* try
+            try
             {
 
 
@@ -35,8 +23,9 @@ namespace Xadrez_console
                 tb.ColocarPeca(new Torre(Cor.Preta, tb), new Posicao(0, 0));
                 tb.ColocarPeca(new Torre(Cor.Preta, tb), new Posicao(1, 3));
                 tb.ColocarPeca(new Rei(Cor.Preta, tb), new Posicao(2, 4));
-                tb.ColocarPeca(new Rei(Cor.Preta, tb), new Posicao(0, 0));
 
+
+                tb.ColocarPeca(new Torre(Cor.Branca, tb), new Posicao(3, 5));
 
 
                 Tela.ImprimirTabuleiro(tb);
@@ -46,7 +35,7 @@ namespace Xadrez_console
             {
                 Console.WriteLine(ex.Message);
             }
-           */
+          
            
         }
     }
