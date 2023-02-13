@@ -39,6 +39,17 @@ namespace Xadrez_console.tabuleiro
             pecas[ps.Linha, ps.Coluna] = p;
             p.Posicao = ps;
         }
+        public Peca RetirarPeca(Posicao ps)
+        {
+            if(Peca(ps) == null)
+            {
+                return null;
+            }
+            Peca aux = Peca(ps);
+            aux.Posicao = null;
+            pecas[ps.Linha, ps.Coluna] = null;
+            return aux;
+        }
         public bool PosicaoValida(Posicao ps)
         {
             if (ps.Linha <  0 || ps.Linha >= Linhas || ps.Coluna < 0 || ps.Coluna >= Colunas)

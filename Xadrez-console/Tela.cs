@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xadrez_console.tabuleiro;
+using Xadrez_console.Xadrez;
 
 namespace Xadrez_console
 {
@@ -32,14 +33,26 @@ namespace Xadrez_console
 
 
         }
+
+        public static PosicaoXadrez LerPosicaoXadrez()
+        {
+            String s = Console.ReadLine();
+            char coluna = s[0];
+            int linha = int.Parse(s[1] + "");
+            return new PosicaoXadrez(coluna, linha);
+        }
         public static void ImprimirPeca(Peca peca) {
-            if(peca.Cor == Cor.Branca)
+
+            ConsoleColor aux = Console.ForegroundColor;
+            if (peca.Cor == Cor.Branca)
             {
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.Write(peca);
+                Console.ForegroundColor = aux;
             }
             else
             {
-                ConsoleColor aux = Console.ForegroundColor;
+                //ConsoleColor aux = Console.ForegroundColor;
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write(peca);
                 Console.ForegroundColor = aux;
