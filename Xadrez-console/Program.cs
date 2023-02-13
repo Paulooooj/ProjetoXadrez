@@ -2,6 +2,7 @@
 using tabuleiro;
 using Xadrez_console.tabuleiro;
 using Xadrez;
+using Xadrez_console.Xadrez;
 
 namespace Xadrez_console
 {
@@ -9,9 +10,23 @@ namespace Xadrez_console
     {
         static void Main(string[] args)
         {
+
+
+
+
+            PosicaoXadrez px = new PosicaoXadrez('c', 7);
+
+            Console.WriteLine(px.ToPosicao());
+            
+            
+            
+            
+            
+            
+            
             //Posicao ps = new Posicao(3, 4);
 
-            try
+           /* try
             {
 
 
@@ -31,6 +46,8 @@ namespace Xadrez_console
             {
                 Console.WriteLine(ex.Message);
             }
+           */
+           
         }
     }
 }
