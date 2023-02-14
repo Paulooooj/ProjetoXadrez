@@ -44,7 +44,7 @@ namespace Xadrez_console.tabuleiro
             return false;
         }
 
-        public bool PoderMoverPara(Posicao pos)
+        public bool MoviementoPossivel(Posicao pos)
         {
             return MovimentosPossiveis()[pos.Linha, pos.Coluna];
         }
