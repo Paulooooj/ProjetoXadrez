@@ -67,7 +67,7 @@ namespace Xadrez_console.Xadrez
                     Posicao direita = new Posicao(Posicao.Linha, Posicao.Coluna + 1);
                     if (Tabuleiro.PosicaoValida(direita) && ExisteInimigo(direita) && Tabuleiro.Peca(direita) == partida.VulneravelEnPassant)
                     {
-                        mat[direita.Linha - 1, esquerda.Coluna] = true;
+                        mat[direita.Linha - 1, direita.Coluna] = true;
                     }
                 }
             }
@@ -104,7 +104,7 @@ namespace Xadrez_console.Xadrez
                     Posicao direita = new Posicao(Posicao.Linha, Posicao.Coluna + 1);
                     if (Tabuleiro.PosicaoValida(direita) && ExisteInimigo(direita) && Tabuleiro.Peca(direita) == partida.VulneravelEnPassant)
                     {
-                        mat[direita.Linha + 1, esquerda.Coluna] = true;
+                        mat[direita.Linha + 1, direita.Coluna] = true;
                     }
                 }
 
